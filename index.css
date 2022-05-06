@@ -1,3 +1,14 @@
 .wrap{
-    width: 200px;
+    min-width: 200px;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.item{
+    margin: 4px 4px 0 4px;
+}
+.delBtn{
+    width: 40px;
+    text-align: center;
 }
