@@ -34,10 +34,11 @@ addRule.addEventListener('click', (e) => {
 })
 
 saveBtn.addEventListener('click', function handleSave() {
-    console.log('addBlockUrlInput', addBlockUrlInput.value)
+    const url = addBlockUrlInput.value
+    if (!url) return
     chrome.storage.local.get(URLS, function (result) {
         const urls = result[URLS] || []
-        const newUrls = [...urls, {url: addBlockUrlInput.value, enable: true}]
+        const newUrls = [...urls, {url, enable: true}]
         chrome.declarativeNetRequest.updateDynamicRules({
             removeRuleIds: Array(urls.length).fill(0).map((_,i) => i + 1),
             addRules: newUrls.filter(urlInfo => urlInfo.enable).map((item, index) => genRule(item, index + 1))
