@@ -2,13 +2,6 @@
    "description": "跨域请求处理",
    "manifest_version": 3,
    "name": "cors",
-   "declarative_net_request" : {
-      "rule_resources" : [{
-         "id": "ruleset_1",
-         "enabled": true,
-         "path": "rules.json"
-      }]
-   },
    "action": {
       "default_popup": "popup.html"
    },
