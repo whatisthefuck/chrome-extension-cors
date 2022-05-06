@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="index.css" >
 </head>
 <body>
-<div id="app">
-    <div>
-        <div v-for="item in list">
-            {{item}}
-        </div>
+<div class="wrap">
+    <div id="addRule">添加规则</div>
+    <div id="addUrlForm" style="display: none">
+        <label for="addBlockUrlInput">url  <input id="addBlockUrlInput" name="url"></label>
+        <div id="saveBtn">保存</div>
     </div>
+    <div id="app"></div>
 </div>
-<div id="addRule">添加规则</div>
 <script src="index.js"></script>
 </body>
 </html>
